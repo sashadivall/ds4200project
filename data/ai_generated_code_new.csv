@@ -562,26 +562,26 @@ result = p.play()",13,10,0,,Song A,Song A,0.09508299990557134,gpt-4o
 100,"Write a program that prints ""Hello, World!"" to the console.",Easy,"print(""Hello, World!"")",1,0,0,,"Hello, World!","Hello, World!",0.011041993275284767,o3-mini
 101,"Ask the user for their name and age, then print a greeting message.",Easy,"name = input(""Enter your name: "")
 age = input(""Enter your age: "")
-print(f""Hello, {name}! You are {age} years old."")",3,0,0,Alice | 30,"Hello, Alice! You are 30 years old.","Hello, Sasha! You are 20 years old.",,o3-mini
+print(f""Hello, {name}! You are {age} years old."")",3,0,0,Alice | 30,"Hello, Alice! You are 30 years old.","Hello, Sasha! You are 20 years old.",0.054750009439885616,o3-mini
 102,Write a program that adds two user-input numbers and displays the result.,Easy,"a = float(input(""Enter first number: ""))
 b = float(input(""Enter second number: ""))
-print(a + b)",3,0,0,3 | 4,7.0,3.0,,o3-mini
+print(a + b)",3,0,0,3 | 4,7.0,3.0,0.04633300704881549,o3-mini
 103,Take an integer as input and print whether it is even or odd.,Easy,"num = int(input(""Enter an integer: ""))
 if num % 2 == 0:
     print(""Even"")
 else:
-    print(""Odd"")",5,0,0,7,Odd,Even,,o3-mini
+    print(""Odd"")",5,0,0,7,Odd,Even,0.0837499974295497,o3-mini
 104,"Given three numbers, print the largest one.",Easy,"a = float(input(""Enter first number: ""))
 b = float(input(""Enter second number: ""))
 c = float(input(""Enter third number: ""))
-print(max(a, b, c))",4,0,0,3 | 7 | 5,7.0,6.0,,o3-mini
+print(max(a, b, c))",4,0,0,3 | 7 | 5,7.0,6.0,0.09891600348055363,o3-mini
 105,Swap the values of two variables without using a third variable.,Easy,"a = input(""Enter first value: "")
 b = input(""Enter second value: "")
 a, b = b, a
 print(""a ="", a)
 print(""b ="", b)",5,0,0,10 | 20,"a = 20
 b = 10","a = 5
-b = 3",,o3-mini
+b = 3",0.11416702182032168,o3-mini
 106,Print all numbers from 1 to 100 using a for loop.,Easy,"for i in range(1, 101):
     print(i)",2,0,1,,"1
 2
