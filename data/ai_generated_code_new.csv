@@ -802,7 +802,7 @@ for i in range(1, 11):
 10 x 7 = 70
 10 x 8 = 80
 10 x 9 = 90
-10 x 10 = 100",,o3-mini
+10 x 10 = 100",0.06541699985973537,o3-mini
 108,Write a function to calculate the factorial of a number using a loop.,Easy,"def factorial(n):
     result = 1
     for i in range(1, n+1):
@@ -810,7 +810,7 @@ for i in range(1, 11):
     return result
 
 num = int(input(""Enter a number: ""))
-print(factorial(num))",8,1,1,5,120,24,,o3-mini
+print(factorial(num))",8,1,1,5,120,24,0.10058400221168995,o3-mini
 109,Check if a given number is a prime number.,Easy,"num = int(input(""Enter a number: ""))
 if num < 2:
     print(""Not prime"")
@@ -820,7 +820,7 @@ else:
         if num % i == 0:
             is_prime = False
             break
-    print(""Prime"" if is_prime else ""Not prime"")",10,0,1,7,Prime,Not prime,,o3-mini
+    print(""Prime"" if is_prime else ""Not prime"")",10,0,1,7,Prime,Not prime,0.25545901735313237,o3-mini
 110,Generate and print the first `n` numbers of the Fibonacci sequence.,Easy,"n = int(input(""Enter n: ""))
 a, b = 0, 1
 for _ in range(n):
@@ -1671,60 +1671,60 @@ for _ in range(n):
 9798174451120912445558785144649757148082243494220523290580147486639333658127841144016820895796354650742381254461383043036431993463924350848845186326770158156487270591499492561
 15853779289614481577191691577533518174485949824765525957623037737532160833631593681512535189759649213804709691705593604227037581022758330489263385511067756715301085561591382880
 25651953740735394022750476722183275322568193318986049248203185224171494491759434825529356085556003864547090946166976647263469574486682681338108571837837914871788356153090875441
-41505733030349875599942168299716793497054143143751575205826222961703655325391028507041891275315653078351800637872570251490507155509441011827371957348905671587089441714682258321",,o3-mini
+41505733030349875599942168299716793497054143143751575205826222961703655325391028507041891275315653078351800637872570251490507155509441011827371957348905671587089441714682258321",0.1229170011356473,o3-mini
 111,Reverse a string taken from user input without using slicing.,Easy,"s = input(""Enter a string: "")
 reversed_str = """"
 for char in s:
     reversed_str = char + reversed_str
-print(reversed_str)",5,0,1,hello,olleh,dlrow olleh,,o3-mini
+print(reversed_str)",5,0,1,hello,olleh,dlrow olleh,0.08816702757030725,o3-mini
 112,Count the number of vowels in a given string.,Easy,"s = input(""Enter a string: "")
 vowels = ""aeiouAEIOU""
 count = 0
 for char in s:
     if char in vowels:
         count += 1
-print(count)",6,0,1,hello,2,3,,o3-mini
+print(count)",6,0,1,hello,2,3,0.0733749766368419,o3-mini
 113,Check whether a given string is a palindrome.,Easy,"s = input(""Enter a string: "")
 if s == s[::-1]:
     print(""Palindrome"")
 else:
-    print(""Not a palindrome"")",4,0,0,radar,Palindrome,Not a palindrome,,o3-mini
+    print(""Not a palindrome"")",4,0,0,radar,Palindrome,Not a palindrome,0.0967920059338212,o3-mini
 114,Write a program to find the length of a list without using `len()`.,Easy,"lst = [int(x) for x in input(""Enter numbers separated by spaces: "").split()]
 count = 0
 for _ in lst:
     count += 1
-print(count)",4,0,1,1 2 3 4,4,5,,o3-mini
+print(count)",4,0,1,1 2 3 4,4,5,0.12491698726080358,o3-mini
 115,Find the largest and smallest numbers in a list of integers.,Easy,"nums = [int(x) for x in input(""Enter numbers separated by spaces: "").split()]
 print(""Largest:"", max(nums))
 print(""Smallest:"", min(nums))",3,0,0,3 7 2 9,"Largest: 9
 Smallest: 2","Largest: 5
-Smallest: 1",,o3-mini
+Smallest: 1",0.08116700337268412,o3-mini
 116,Remove all duplicate elements from a list and print the result.,Easy,"lst = [int(x) for x in input(""Enter numbers separated by spaces: "").split()]
 unique = list(dict.fromkeys(lst))
-print(unique)",3,0,0,1 2 2 3 3 3,"[1, 2, 3]","[1, 2, 3, 4, 5]",,o3-mini
+print(unique)",3,0,0,1 2 2 3 3 3,"[1, 2, 3]","[1, 2, 3, 4, 5]",0.12495898408815265,o3-mini
 117,Sort a list of integers in ascending order using the built-in sort() method.,Easy,"lst = [int(x) for x in input(""Enter numbers separated by spaces: "").split()]
 lst.sort()
-print(lst)",3,0,0,3 1 4 2,"[1, 2, 3, 4]","[1, 2, 3, 4, 5]",,o3-mini
+print(lst)",3,0,0,3 1 4 2,"[1, 2, 3, 4]","[1, 2, 3, 4, 5]",0.11470797471702099,o3-mini
 118,Calculate the sum of all numbers in a list using a loop.,Easy,"nums = [int(x) for x in input(""Enter numbers separated by spaces: "").split()]
 total = 0
 for num in nums:
     total += num
-print(total)",4,0,1,1 2 3 4,10,15,,o3-mini
+print(total)",4,0,1,1 2 3 4,10,15,0.23329199757426977,o3-mini
 119,Write a function that returns the second largest number in a list.,Easy,"def second_largest(lst):
     unique = list(set(lst))
     unique.sort()
     return unique[-2] if len(unique) >= 2 else None
 
 lst = [int(x) for x in input(""Enter numbers separated by spaces: "").split()]
-print(second_largest(lst))",7,1,0,4 1 3 2,3,5,,o3-mini
+print(second_largest(lst))",7,1,0,4 1 3 2,3,5,0.0882500025909394,o3-mini
 120,Convert a temperature from Celsius to Fahrenheit.,Easy,"c = float(input(""Enter temperature in Celsius: ""))
 f = (c * 9/5) + 32
-print(f)",3,0,0,0,32.0,32.0,,o3-mini
+print(f)",3,0,0,0,32.0,32.0,0.0507919758092612,o3-mini
 121,Count the number of words in a sentence input by the user.,Easy,"sentence = input(""Enter a sentence: "")
 words = sentence.split()
-print(len(words))",3,0,0,Hello world,2,7,,o3-mini
+print(len(words))",3,0,0,Hello world,2,7,0.05045899888500571,o3-mini
 122,Write a program that prints the ASCII value of a given character.,Easy,"char = input(""Enter a character: "")[0]
-print(ord(char))",2,0,0,A,65,99,,o3-mini
+print(ord(char))",2,0,0,A,65,99,0.07120799273252487,o3-mini
 123,Print each character of a string on a new line using a loop.,Easy,"s = input(""Enter a string: "")
 for char in s:
     print(char)",3,0,1,Hi,"H
@@ -1739,17 +1739,17 @@ i
 e
 n
 c
-e",,o3-mini
+e",0.055042008170858026,o3-mini
 124,Merge two user-defined lists and print the merged result.,Easy,"lst1 = [int(x) for x in input(""Enter first list of numbers separated by spaces: "").split()]
 lst2 = [int(x) for x in input(""Enter second list of numbers separated by spaces: "").split()]
 merged = lst1 + lst2
-print(merged)",4,0,0,1 2 | 3 4,"[1, 2, 3, 4]","[1, 2, 3, 4, 5, 5, 4, 3, 2, 1]",,o3-mini
+print(merged)",4,0,0,1 2 | 3 4,"[1, 2, 3, 4]","[1, 2, 3, 4, 5, 5, 4, 3, 2, 1]",0.12329200399108231,o3-mini
 125,Square every element of a list using list comprehension.,Easy,"lst = [int(x) for x in input(""Enter numbers separated by spaces: "").split()]
 squared = [x**2 for x in lst]
-print(squared)",3,0,1,1 2 3,"[1, 4, 9]","[1, 9, 25, 49, 81]",,o3-mini
+print(squared)",3,0,1,1 2 3,"[1, 4, 9]","[1, 9, 25, 49, 81]",0.0917089928407222,o3-mini
 126,Filter out all even numbers from a list using list comprehension.,Easy,"lst = [int(x) for x in input(""Enter numbers separated by spaces: "").split()]
 filtered = [x for x in lst if x % 2 != 0]
-print(filtered)",3,0,1,1 2 3 4 5,"[1, 3, 5]",[],,o3-mini
+print(filtered)",3,0,1,1 2 3 4 5,"[1, 3, 5]",[],0.2665409992914647,o3-mini
 127,Write a function that returns the sum of digits of an integer.,Easy,"def sum_of_digits(n):
     total = 0
     for digit in str(abs(n)):
@@ -1757,14 +1757,14 @@ print(filtered)",3,0,1,1 2 3 4 5,"[1, 3, 5]",[],,o3-mini
     return total
 
 num = int(input(""Enter an integer: ""))
-print(sum_of_digits(num))",8,1,1,123,6,9,,o3-mini
+print(sum_of_digits(num))",8,1,1,123,6,9,0.08679201710037887,o3-mini
 128,Find the maximum of three numbers using a user-defined function.,Easy,"def max_of_three(a, b, c):
     return max(a, b, c)
 
 a = float(input(""Enter first number: ""))
 b = float(input(""Enter second number: ""))
 c = float(input(""Enter third number: ""))
-print(max_of_three(a, b, c))",7,3,0,3 | 7 | 5,7.0,29.0,,o3-mini
+print(max_of_three(a, b, c))",7,3,0,3 | 7 | 5,7.0,29.0,0.11241697939112782,o3-mini
 129,Create a list of numbers from 1 to 20 using `range()` and print it.,Easy,"print(list(range(1, 21)))",1,0,0,,"[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20]","[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20]",0.10137501521967351,o3-mini
 130,Convert a string to uppercase without using the `upper()` function.,Easy,"s = input(""Enter a string: "")
 result = """"
@@ -1773,16 +1773,16 @@ for char in s:
         result += chr(ord(char) - 32)
     else:
         result += char
-print(result)",6,0,1,hello,HELLO,HELLO,,o3-mini
+print(result)",6,0,1,hello,HELLO,HELLO,0.1149999734479934,o3-mini
 131,Count how many times a specific character appears in a string.,Easy,"s = input(""Enter a string: "")
 char = input(""Enter the character to count: "")
 count = 0
 for c in s:
     if c == char:
         count += 1
-print(count)",5,0,1,hello | l,2,0,,o3-mini
+print(count)",5,0,1,hello | l,2,0,0.11216601706109941,o3-mini
 132,Replace all spaces in a string with underscores.,Easy,"s = input(""Enter a string: "")
-print(s.replace("" "", ""_""))",2,0,0,hello world,hello_world,hello,,o3-mini
+print(s.replace("" "", ""_""))",2,0,0,hello world,hello_world,hello,0.040790997445583344,o3-mini
 133,"Write a function to check if a number is positive, negative, or zero.",Easy,"def check_number(n):
     if n > 0:
         return ""Positive""
@@ -1792,36 +1792,36 @@ print(s.replace("" "", ""_""))",2,0,0,hello world,hello_world,hello,,o3-mini
         return ""Zero""
 
 num = float(input(""Enter a number: ""))
-print(check_number(num))",10,1,0,5,Positive,Positive,,o3-mini
+print(check_number(num))",10,1,0,5,Positive,Positive,0.1232089998666197,o3-mini
 134,Create a dictionary with 3 key-value pairs and print it.,Easy,"d = {""a"": 1, ""b"": 2, ""c"": 3}
 print(d)",2,0,0,,"{'a': 1, 'b': 2, 'c': 3}","{'a': 1, 'b': 2, 'c': 3}",0.15912498929537833,o3-mini
 135,Access a specific value from a dictionary using a key.,Easy,"d = {""a"": 1, ""b"": 2, ""c"": 3}
 key = input(""Enter key: "")
-print(d.get(key, ""Key not found""))",3,0,0,b,2,Key not found,,o3-mini
+print(d.get(key, ""Key not found""))",3,0,0,b,2,Key not found,0.05745899397879839,o3-mini
 136,Add a new key-value pair to an existing dictionary.,Easy,"d = {""a"": 1, ""b"": 2, ""c"": 3}
 key = input(""Enter key: "")
 value = input(""Enter value: "")
 d[key] = value
-print(d)",4,0,0,d | 4,"{'a': 1, 'b': 2, 'c': 3, 'd': '4'}","{'a': 1, 'b': 2, 'c': 3, 'hello': '8'}",,o3-mini
+print(d)",4,0,0,d | 4,"{'a': 1, 'b': 2, 'c': 3, 'd': '4'}","{'a': 1, 'b': 2, 'c': 3, 'hello': '8'}",0.08491598418913782,o3-mini
 137,Delete a key-value pair from a dictionary.,Easy,"d = {""a"": 1, ""b"": 2, ""c"": 3}
 key = input(""Enter key to delete: "")
 if key in d:
     del d[key]
-print(d)",4,0,0,b,"{'a': 1, 'c': 3}","{'a': 1, 'b': 2, 'c': 3}",,o3-mini
+print(d)",4,0,0,b,"{'a': 1, 'c': 3}","{'a': 1, 'b': 2, 'c': 3}",0.08433300536125898,o3-mini
 138,Create a tuple with 5 elements and print the second element.,Easy,"t = (1, 2, 3, 4, 5)
 print(t[1])",2,0,0,,2,2,0.16866601072251797,o3-mini
 139,Convert a list to a tuple and print the result.,Easy,"lst = [int(x) for x in input(""Enter numbers separated by spaces: "").split()]
-print(tuple(lst))",2,0,1,1 2 3,"(1, 2, 3)","(1, 2, 3, 4, 5)",,o3-mini
+print(tuple(lst))",2,0,1,1 2 3,"(1, 2, 3)","(1, 2, 3, 4, 5)",0.051624985644593835,o3-mini
 140,Check if an element exists in a list.,Easy,"lst = [int(x) for x in input(""Enter numbers separated by spaces: "").split()]
 element = int(input(""Enter element to search: ""))
-print(element in lst)",3,0,0,1 2 3 | 2,True,Error: invalid literal for int() with base 10: 'hello',,o3-mini
+print(element in lst)",3,0,0,1 2 3 | 2,True,Error: invalid literal for int() with base 10: 'hello',0.0635830219835043,o3-mini
 141,Check if a key exists in a dictionary.,Easy,"d = {""a"": 1, ""b"": 2, ""c"": 3}
 key = input(""Enter key to search: "")
-print(key in d)",3,0,0,a,True,False,,o3-mini
+print(key in d)",3,0,0,a,True,False,0.12158398749306798,o3-mini
 142,Write a program to calculate the area of a rectangle given length and width.,Easy,"length = float(input(""Enter length: ""))
 width = float(input(""Enter width: ""))
 area = length * width
-print(area)",3,0,0,5 | 3,15.0,8.0,,o3-mini
+print(area)",3,0,0,5 | 3,15.0,8.0,0.06266601849347353,o3-mini
 143,Create a set with 5 elements and print it.,Easy,"s = {1, 2, 3, 4, 5}
 print(s)",2,0,0,,"{1, 2, 3, 4, 5} (order may vary)","{1, 2, 3, 4, 5}",0.1734999823383987,o3-mini
 144,Add an element to a set and remove another.,Easy,"s = {1, 2, 3, 4, 5}
@@ -1837,12 +1837,12 @@ print(""Intersection:"", intersection)",4,0,0,,"Union: {1, 2, 3, 4}
 Intersection: {2, 3}","Union: {1, 2, 3, 4}
 Intersection: {2, 3}",0.1099579967558384,o3-mini
 146,Find the number of digits in an integer.,Easy,"num = int(input(""Enter an integer: ""))
-print(len(str(abs(num))))",2,0,0,12345,5,2,,o3-mini
+print(len(str(abs(num))))",2,0,0,12345,5,2,0.053041003411635756,o3-mini
 147,Check whether a given year is a leap year.,Easy,"year = int(input(""Enter a year: ""))
 if (year % 4 == 0 and year % 100 != 0) or (year % 400 == 0):
     print(""Leap year"")
 else:
-    print(""Not a leap year"")",5,0,0,2020,Leap year,Leap year,,o3-mini
+    print(""Not a leap year"")",5,0,0,2020,Leap year,Leap year,0.0661670055706054,o3-mini
 148,Create a list of the first 10 even numbers using a loop.,Easy,"even_numbers = []
 for i in range(1, 21):
     if i % 2 == 0:
@@ -1855,7 +1855,7 @@ print(even_numbers)",4,0,1,,"[2, 4, 6, 8, 10, 12, 14, 16, 18, 20]","[2, 4, 6, 8,
         return reverse_string(s[1:]) + s[0]
 
 input_str = input(""Enter a string: "")
-print(reverse_string(input_str))",8,1,0,hello,olleh,ereht olleh,,o3-mini
+print(reverse_string(input_str))",8,1,0,hello,olleh,ereht olleh,0.07462501525878906,o3-mini
 150,Write a function that finds the GCD of two numbers using the Euclidean algorithm.,Medium,"def gcd(a, b):\n    while b:\n        a, b = b, a % b\n    return a\n\nprint(gcd(48, 18))",4,2,1,48 18,6,6,0.32933297916315496,o3-mini
 151,Implement a function to check whether a string is a pangram.,Medium,"def is_pangram(s):\n    s = s.lower()\n    return set('abcdefghijklmnopqrstuvwxyz').issubset(set(s))\n\nprint(is_pangram(""The quick brown fox jumps over the lazy dog""))",4,1,0,The quick brown fox jumps over the lazy dog,True,True,0.06424999446608126,o3-mini
 152,Write a function that returns the most frequent element in a list.,Medium,"def most_frequent(lst):\n    return max(set(lst), key=lst.count)\n\nprint(most_frequent([1,2,2,3,3,3,4]))",3,1,0,"[1,2,2,3,3,3,4]",3,3,0.04070799332112074,o3-mini
