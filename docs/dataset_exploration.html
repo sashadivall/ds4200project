@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Model Selector</title>
+  <style>
+    body { font-family: Arial, sans-serif; margin: 20px; }
+    .container { max-width: 800px; margin: auto; }
+    label { display: block; margin-top: 15px; }
+    select { width: 100%; padding: 8px; margin-top: 5px; }
+    .display-area { margin-top: 20px; padding: 15px; border: 1px solid #ccc; background: #f9f9f9; }
+    pre { background-color: #eee; padding: 10px; }
+  </style>
+  <!-- Papa Parse -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.3.2/papaparse.min.js"></script>
+</head>
+<body>
+  <div class="container">
+    <h1>Python Code Snippets</h1>
+
+    <label for="difficulty">Select Difficulty:</label>
+    <select id="difficulty">
+      <option value="">-- Select Difficulty --</option>
+    </select>
+
+    <label for="question">Select Question:</label>
+    <select id="question">
+      <option value="">-- Select Question --</option>
+    </select>
+
+    <label for="model">Select Model:</label>
+    <select id="model">
+      <option value="">-- Select Model --</option>
+    </select>
+
+    <div class="display-area" id="displayArea">
+      <!-- Code and metrics will be shown here -->
+    </div>
+  </div>
+
+  <script>
+    let allData = [];
+
+    const difficultySelect = document.getElementById("difficulty");
+    const questionSelect = document.getElementById("question");
+    const modelSelect = document.getElementById("model");
+    const displayArea = document.getElementById("displayArea");
+
+    Papa.parse("../data/ai_generated_code_new.csv", {
+      download: true,
+      header: true,
+      skipEmptyLines: true,
+      complete: function(results) {
+        allData = results.data.map(row => ({
+          question: row.question.trim(),
+          difficulty: row.difficulty.trim().toLowerCase(),
+          code: row.code,
+          numLines: row.num_lines,
+          model: row.model.trim().toLowerCase(),
+          executionTime: row.execution_time_ms
+        }));
+        
+
+        // Populate difficulty dropdown
+        const difficulties = [...new Set(allData.map(row => row.difficulty))];
+        difficulties.forEach(diff => {
+          const opt = document.createElement("option");
+          opt.value = diff;
+          opt.textContent = diff.charAt(0).toUpperCase() + diff.slice(1);
+          difficultySelect.appendChild(opt);
+        });
+      }
+    });
+
+    difficultySelect.addEventListener("change", () => {
+      for (const row of allData) {
+          console.log(row);
+        }
+      const selected = difficultySelect.value;
+      questionSelect.innerHTML = '<option value="">-- Select Question --</option>';
+      modelSelect.innerHTML = '<option value="">-- Select Model --</option>';
+      displayArea.innerHTML = '';
+
+      const questions = [...new Set(allData
+        .filter(row => row.difficulty === selected)
+        .map(row => row.question))];
+
+      questions.forEach(q => {
+        const opt = document.createElement("option");
+        opt.value = q;
+        opt.textContent = q;
+        questionSelect.appendChild(opt);
+      });
+    });
+
+    questionSelect.addEventListener("change", () => {
+      const selectedDifficulty = difficultySelect.value;
+      const selectedQuestion = questionSelect.value;
+      modelSelect.innerHTML = '<option value="">-- Select Model --</option>';
+      displayArea.innerHTML = '';
+
+      const models = [...new Set(allData
+        .filter(row =>
+          row.difficulty === selectedDifficulty &&
+          row.question === selectedQuestion
+        )
+        .map(row => row.model))];
+
+      models.forEach(m => {
+        const opt = document.createElement("option");
+        opt.value = m;
+        opt.textContent = m;
+        modelSelect.appendChild(opt);
+      });
+    });
+
+    modelSelect.addEventListener("change", () => {
+      const selectedDifficulty = difficultySelect.value;
+      const selectedQuestion = questionSelect.value;
+      const selectedModel = modelSelect.value;
+
+      const match = allData.find(row =>
+        row.difficulty === selectedDifficulty &&
+        row.question === selectedQuestion &&
+        row.model === selectedModel
+      );
+
+      displayArea.innerHTML = '';
+
+      if (match) {
+        displayArea.innerHTML = `
+          <pre>${match.code}</pre>
+          <p><strong>Execution Time (ms):</strong> ${match.executionTime}</p>
+          <p><strong>Number of Lines:</strong> ${match.numLines}</p>
+        `;
+      } else {
+        displayArea.innerHTML = "<p>No data found for selection.</p>";
+      }
+    });
+  </script>
+</body>
+</html>
