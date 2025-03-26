@@ -7,9 +7,19 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.3.2/papaparse.min.js"></script>
 </head>
 <body>
+  <header>
+    <h1>How Good is AI at Writing Human-Like Code?</h1>
+    <p>DS4200 Spring 2025 Final Project</p>
+    <p>by Sasha DiVall, Molly Varrenti, and Ben Weiss</p>
+  </header>
+
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="dataset_exploration.html">Interactive Dataset Exploration</a>
+  </nav>
   <div class="container">
     <h1>Explore the Dataset</h1>
-    <h3>Start by selecting the difficulty, then the question, then the model to see how the model answered!</h3>
+    <h3>Start by selecting the difficulty, then the question, then the model, to see how the model answered!</h3>
 
     <label for="difficulty">Select Difficulty:</label>
     <select id="difficulty">
@@ -47,7 +57,8 @@
         allData = results.data.map(row => ({
           question: row.question.trim(),
           difficulty: row.difficulty.trim().toLowerCase(),
-          code: row.code,
+          code: row.code.replace('\n', '<br>'),
+          sampleInput: row.sample_input,
           numLines: row.num_lines,
           numLoops: row.num_loops,
           model: row.model.trim().toLowerCase(),
@@ -124,6 +135,7 @@
       if (match) {
         displayArea.innerHTML = `
           <pre>${match.code}</pre>
+          <p><strong>Sample Input:</strong> ${match.sampleInput}</p>
           <p><strong>Execution Time (ms):</strong> ${match.executionTime}</p>
           <p><strong>Number of Lines:</strong> ${match.numLines}</p>
           <p><strong>Number of Loops:</strong> ${match.numLoops}</p>
