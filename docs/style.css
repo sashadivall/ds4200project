@@ -76,3 +76,12 @@ header, nav, main, footer {
     font-size: 0.9rem;
     color: #777;
   }
+
+
+  .container { max-width: 800px; margin: auto; }
+  label { display: block; margin-top: 15px; }
+  select { width: 100%; padding: 8px; margin-top: 5px; }
+  .display-area { margin-top: 20px; padding: 15px; border: 1px solid #ccc; background: #f9f9f9; }
+  pre { background-color: #eee; padding: 10px; }
+
+  
