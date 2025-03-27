@@ -57,7 +57,7 @@
         allData = results.data.map(row => ({
           question: row.question.trim(),
           difficulty: row.difficulty.trim().toLowerCase(),
-          code: row.code.replace('\n', '<br>'),
+          code: row.code.replace(/\\n/g, '<br>'),
           sampleInput: row.sample_input,
           numLines: row.num_lines,
           numLoops: row.num_loops,
