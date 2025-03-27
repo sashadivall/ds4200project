@@ -28,9 +28,31 @@
         efficient, sensible code. This project investigates the ability of different LLMs to write Python solutions to easy and medium programming
         problems.
     </p>
-    <h4>Data</h4>
-    <p> 
-      Describe how the dataset was done.
+    <br>
+    <h4>Dataset Creation</h4>
+    <p class="indent-block"> 
+      We created our dataset from scratch by providing a series of prompts to 3 different LLMs. First, we asked ChatGPT to create a list 
+      of 50 easy Python programming questions and 50 medium Python programming questions, where easy and medium measure the difficulty of the
+      problem. 
+      <br>
+      The prompt we used: <b><i>Generate a list of 50 easy python programming questions and 50 medium.</i></b>
+      <br>
+      After rephrasing the prompt to ensure that the problem description was detailed enough, ChatGPT successfully generated a list of 
+      50 easy and 50 medium Python questions.
+      <br>
+      The next step was deciding which models we wanted to evaluate. A group member subscribes to ChatGPT+ which gave us access to a lengthy list 
+      of models created by OpenAI. We decided to test the following two OpenAI models: 
+      <br>
+          <p class="indent-block"><a href="https://openai.com/index/hello-gpt-4o/"><b>gpt-4o</b></a>: Described by OpenAI as "Great for most tasks." Released May 2024.</p>
+          <p class="indent-block"><a href="https://openai.com/index/openai-o3-mini/"><b>o3-mini</b></a>: Described by OpenAI as "Fast at advanced reasoning." Released January 2025.</p>
+          We wanted to see if a more "advanced" model like o3-mini produced better, faster solutions to the same set of questions than gpt-4o. gpt-4o and o3-mini are only available 
+      to those that upgrade to ChatGPT+, so we wanted to choose a third, free model for comparison. We decided on <a href="https://blogs.microsoft.com/blog/2023/03/16/introducing-microsoft-365-copilot-your-copilot-for-work/">Microsoft Copilot</a>.
+      <br>
+      Once we decided on our models, we asked each of them to create code solutions for each of the 50 easy problems and 50 medium problems and recorded the result to a .csv file.
+      For each code snippet, we calculated the number of lines, the number of loops, and the number of parameters. Additionally, we generated a sample input along with expected output to test the 
+      accuracy of the code snippet. To determine the actual output and execution time, we ran the code snippet, using the sample input, and measured the time (in ms) it took
+      to execute and the output it returned. All code snippets returned an output that was equal to the expected output. Explore the dataset <a href="dataset_exploration.html">here!</a>
+
     </p>
     <br>
     <br>
