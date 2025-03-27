@@ -1,89 +1,55 @@
 * {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-  }
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
 .indent-block {
   text-indent: 30px;
 }
 body {
-    font-family: Arial, sans-serif;
-    line-height: 1.6;
-    padding: 2rem;
-    max-width: 800px;
-    margin: auto;
-    background-color: #f9f9f9;
-    color: #333;
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  padding: 2rem;
+  max-width: 800px;
+  margin: auto;
+  background-color: #f9f9f9;
+  color: #333;
 }
 
 header, nav, main, footer {
-    margin-bottom: 2rem;
+  margin-bottom: 2rem;
 }
 
-* {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
+header h1 {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
 
-    body {
-      font-family: Arial, sans-serif;
-      line-height: 1.6;
-      padding: 2rem;
-      max-width: 800px;
-      margin: auto;
-      background-color: #f9f9f9;
-      color: #333;
-    }
+nav a {
+  margin-right: 1rem;
+  text-decoration: none;
+  color: #0077cc;
+}
 
-    header, nav, main, footer {
-      margin-bottom: 2rem;
-    }
+nav a:hover {
+  text-decoration: underline;
+}
 
-    header h1 {
-      font-size: 2rem;
-      margin-bottom: 0.5rem;
-    }
+footer {
+  font-size: 0.9rem;
+  color: #777;
+}
 
-    nav a {
-      margin-right: 1rem;
-      text-decoration: none;
-      color: #0077cc;
-    }
-
-    nav a:hover {
-      text-decoration: underline;
-    }
-
-    footer {
-      font-size: 0.9rem;
-      color: #777;
-    }
-    header h1 {
-    font-size: 2rem;
-    margin-bottom: 0.5rem;
-  }
-
-  nav a {
-    margin-right: 1rem;
-    text-decoration: none;
-    color: #0077cc;
-  }
-
-  nav a:hover {
-    text-decoration: underline;
-  }
-
-  footer {
-    font-size: 0.9rem;
-    color: #777;
-  }
-
-
-  .container { max-width: 800px; margin: auto; }
-  label { display: block; margin-top: 15px; }
-  select { width: 100%; padding: 8px; margin-top: 5px; }
-  .display-area { margin-top: 20px; padding: 15px; border: 1px solid #ccc; background: #f9f9f9; }
-  pre { background-color: #eee; padding: 10px; }
-
-  
+.container { 
+  max-width: 800px; margin: auto; 
+}
+label { 
+  display: block; margin-top: 15px; 
+}
+select { 
+  width: 100%; padding: 8px; margin-top: 5px; 
+}
+.display-area { 
+  margin-top: 20px; padding: 15px; border: 1px solid #ccc; background: #f9f9f9; 
+}
+ 

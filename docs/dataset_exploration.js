@@ -1,3 +1,5 @@
+// PapaParse library from https://www.papaparse.com/docs 
+
 let allData = [];
 
 const difficultySelect = document.getElementById("difficulty");
