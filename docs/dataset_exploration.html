@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Dataset Exploration</title>
+  <link rel="stylesheet" href="style.css" />
+  <!-- Including PapaParse for csv parsing -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.3.2/papaparse.min.js"></script> 
+</head>
+<body>
+  <header>
+    <h1>How Good is AI at Writing Human-Like Code?</h1>
+    <p>DS4200 Spring 2025 Final Project</p>
+    <p>by Sasha DiVall, Molly Varrenti, and Ben Weiss</p>
+  </header>
+
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="dataset_exploration.html">Interactive Dataset Exploration</a>
+  </nav>
+  <div class="container">
+    <h1>Explore the Dataset</h1>
+    <h3>Start by selecting the difficulty, then the question, then the model, to see how the model answered!</h3>
+
+    <label for="difficulty">Select Difficulty:</label>
+    <select id="difficulty">
+      <option value="">-- Select Difficulty --</option>
+    </select>
+
+    <label for="question">Select Question:</label>
+    <select id="question">
+      <option value="">-- Select Question --</option>
+    </select>
+
+    <label for="model">Select Model:</label>
+    <select id="model">
+      <option value="">-- Select Model --</option>
+    </select>
+
+    <div class="display-area" id="displayArea">
+      <!-- Code and metrics will be shown here -->
+    </div>
+  </div>
+
+  <script src="dataset_exploration.js"></script>
+</body>
+</html>
