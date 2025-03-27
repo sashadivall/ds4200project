@@ -115,7 +115,7 @@
             .attr("width", xScale.bandwidth())
             .attr("height", yScale.bandwidth())
             .style("fill", d => colorScale(d.execution_time_ms))
-            .style("stroke", "white")
+            .style("stroke", "lightgray")
             .on("mouseover", function(event, d) {
                 const avgParams = d3.mean(groupedData.get(d.model).get(d.num_loops), d => d.num_parameters).toFixed(2);
                 tooltip.transition()
