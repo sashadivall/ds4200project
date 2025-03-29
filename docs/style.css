@@ -53,3 +53,34 @@ select {
   margin-top: 20px; padding: 15px; border: 1px solid #ccc; background: #f9f9f9; 
 }
  
+
+.axis path, .axis line {
+  fill: none;
+  shape-rendering: crispEdges;
+}
+.cell {
+  stroke: #eee;
+}
+.tooltip {
+  position: absolute;
+  text-align: center;
+  padding: 8px;
+  background: rgba(0, 0, 0, 0.7);
+  color: white;
+  border-radius: 4px;
+  pointer-events: none;
+  font-size: 12px;
+}
+.legend {
+  font-size: 12px;
+}
+.legend rect {
+  stroke-width: 0;
+}
+.title {
+  text-anchor: middle;
+  font-weight: bold;
+}
+.axis-label {
+  font-size: 14px;
+}
