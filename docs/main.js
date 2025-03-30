@@ -8,8 +8,8 @@ d3.csv('./ai_generated_code_new.csv').then(function(data) {
         d.model = d.model; // Ensure model is retained
     });
 
-    const margin = { top: 50, right: 50, bottom: 120, left: 100 },
-          width = 800 - margin.left - margin.right,
+    const margin = { top: 50, right: 50, bottom: 120, left: 50 },
+          width = 700 - margin.left - margin.right,
           height = 400 - margin.top - margin.bottom;
 
     const colorScale = d3.scaleSequential(d3.interpolatePurples)
