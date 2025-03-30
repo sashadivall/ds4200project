@@ -39,7 +39,9 @@
       The prompt we used: <b><i>Generate a list of 50 easy python programming questions and 50 medium.</i></b>
       <br>
       After rephrasing the prompt to ensure that the problem description was detailed enough, ChatGPT successfully generated a list of 
-      50 easy and 50 medium Python questions.
+      50 easy and 50 medium Python questions. While we experimented with generating lists of 50 hard Python questions, a lot of these questions
+      involved creating websites or apps (i.e., problems that could not be tested in our evaluation environment). For simplicity, we kept the problem 
+      statement to 50 easy and 50 medium questions. 
       <br>
       The next step was deciding which models we wanted to evaluate. A group member subscribes to ChatGPT+ which gave us access to a lengthy list 
       of models created by OpenAI. We decided to test the following two OpenAI models: 
@@ -59,7 +61,7 @@
     <br>
 
     <h2>Results</h2>
-    <container class="viz">
+    <container>
       <iframe src="viz1.html" width="1000" height="500" frameborder="0"></iframe>
       <p> <b>Figure 1: </b> In figure one you will see two bar charts comparing the performance of three models (copilot, gpt-4o, and o3-mini) on tasks of varying difficulty (Easy and Medium). The left chart shows the mean execution time in milliseconds for each model, while the right chart displays the mean number of lines of code required.
         The charts indicate that while copilot tends to have higher execution times and longer code lengths compared to gpt-4o and o3-mini across both task difficulties (Easy and Medium), o3-mini consistently performs with lower execution times and shorter code lengths.
@@ -95,16 +97,15 @@
         <p> <b>Figure 4: </b> Figure 4's heatmap illustrates the execution time (in milliseconds) versus the number of loops for different models: gpt-4o, o3-mini, and copilot. The color intensity represents the execution time, with darker shades indicating longer times. The heatmap compares execution times across loop counts (0 to 4) for three models: gpt-4o, o3-mini, and copilot. The color gradient shows execution time (0.00 to 0.70 ms).</p>
   
       </container>
-
+    <br>
 
     <h2>Conclusions</h2>
-    <br>
     <p><b>Performance Consistency:</b> gpt-4o and o3-mini show more efficient and reliable performance compared to Microsoft Copilot, which has higher variability.</p>
     <p><b>Execution Time Trends:</b> Execution time increases with code length, but GPT-4o and o3-mini maintain lower times than Copilot.</p>  
     <p><b>Code Length Efficiency:</b> GPT-4o and o3-mini generate shorter code solutions on average compared to Copilot.</p>
     <p><b>Outliers and Variability:</b> Copilot has more pronounced outliers and variability in execution times, especially for Easy tasks.</p>
-    <p><b>Heatmap Insights:</b> he heatmap shows that as the number of loops increases, execution times generally increase for all models, with Copilot exhibiting the highest execution times and variability.</p>
-    <p><b>In summary,</b>These conclusions highlight the consistent efficiency of GPT-4o and o3-mini across various metrics, while Copilot shows greater variability and higher execution times, particularly as task complexity increases.</p>
+    <p><b>Heatmap Insights:</b> The heatmap shows that as the number of loops increases, execution times generally increase for all models, with Copilot exhibiting the highest execution times and variability.</p>
+    <p><b>In summary: </b>These conclusions highlight the consistent efficiency of GPT-4o and o3-mini across various metrics, while Copilot shows greater variability and higher execution times, particularly as task complexity increases.</p>
     
   </main>
 
