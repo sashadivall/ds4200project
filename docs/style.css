@@ -49,7 +49,10 @@ label {
 select { 
   width: 100%; padding: 8px; margin-top: 5px; 
 }
+.small-image {
+  width: 80px; 
+  height: auto;  
+}
 .display-area { 
   margin-top: 20px; padding: 15px; border: 1px solid #ccc; background: #f9f9f9; 
 }
- 
