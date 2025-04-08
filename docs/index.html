@@ -4,7 +4,8 @@
   <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <link rel="stylesheet" href="style.css" />
-  <title>Which LLM is the Best At Writing Code? - DS4200 Project</title>
+<link rel="shortcut icon" type="image/png" href="favicon.png">
+<title>Which LLM is the Best At Writing Code? - DS4200 Project</title>
 </head>
 <body>
   <header>
@@ -70,7 +71,10 @@
 
       <iframe src="viz2.html" width="600" height="450" frameborder="0"></iframe>
       <br>
-      <p> <b>Figure 2: </b> Figure 2 shows a scatter plot titled 'log(Execution Time) vs Number of Lines,' with the x-axis ranging from 0 to 35 and the y-axis from -5.0 to 1.0. Data points for gpt-4o (blue), o3-mini (green), and Microsoft Copilot (red) are shown, with a legend at the bottom identifying each model. Hover over each data point to see the difficulty and execution time in milliseconds. The scatter plot highlights the differences in performance characteristics between the three models, with gpt-4o and o3-mini showing more efficient execution times relative to the number of lines of code compared to Microsoft Copilot.
+      <p> <b>Figure 2: </b> Figure 2 shows a scatter plot titled 'log(Execution Time) vs Number of Lines,' with the x-axis ranging from 0 to 35 and the y-axis from -5.0 to 1.0. Data points for gpt-4o (blue), o3-mini (green), and Microsoft Copilot (red) are shown, with a legend at the bottom identifying each model. Hover over each data point to see the difficulty and execution time in milliseconds. 
+        At the bottom of the plot, click each button to isolate data points for each model. The scatter plot highlights the differences in performance characteristics between the three models, with gpt-4o and o3-mini showing more efficient execution times relative to the number of lines of code compared to Microsoft Copilot. As you click each model, the regression line changes. This regression line
+        helps identify the relationship between the number of lines and the log of the execution time for the code snippets written by each model. For gpt-4o and Microsoft Copilot, the regression line is upward-sloping, which is expected. For o3-mini, however, the regression line is downward sloping, which is a bit surprising. 
+        However, remember that we took the log of the execution time. The downward sloping line may indicate that there may not be much change in execution time as the number of lines increases!
       </p>
 
     </container>
