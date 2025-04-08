@@ -63,16 +63,14 @@
     <h2>Results</h2>
     <container>
       <iframe src="viz1.html" width="1000" height="500" frameborder="0"></iframe>
-      <p> <b>Figure 1: </b> In figure one you will see two bar charts comparing the performance of three models (copilot, gpt-4o, and o3-mini) on tasks of varying difficulty (Easy and Medium). The left chart shows the mean execution time in milliseconds for each model, while the right chart displays the mean number of lines of code required.
-        The charts indicate that while copilot tends to have higher execution times and longer code lengths compared to gpt-4o and o3-mini across both task difficulties (Easy and Medium), o3-mini consistently performs with lower execution times and shorter code lengths.
+      <p> <b>Figure 1: </b> In figure one you will see two bar charts comparing the performance of three models (copilot, gpt-4o, and o3-mini) on tasks of varying difficulty (Easy and Medium). The left chart shows the mean execution time in milliseconds for each model, while the right chart displays the mean number of lines of code required. Hover over each bar to see the difficulty type and average number of lines. The charts indicate that while copilot tends to have higher execution times and longer code lengths compared to gpt-4o and o3-mini across both task difficulties (Easy and Medium), o3-mini consistently performs with lower execution times and shorter code lengths.
       </p>
     </container>
     <container>
 
       <iframe src="viz2.html" width="600" height="450" frameborder="0"></iframe>
       <br>
-      <p> <b>Figure 2: </b> Figure 2 shows a scatter plot titled "log(Execution Time) vs Number of Lines," with the x-axis ranging from 0 to 35 and the y-axis from -5.0 to 1.0. Data points for gpt-4o (blue), o3-mini (green), and Microsoft Copilot (red) are shown, with a legend at the bottom identifying each model.
-        The scatter plot highlights the differences in performance characteristics between the three models, with gpt-4o and o3-mini showing more efficient execution times relative to the number of lines of code compared to Microsoft Copilot.
+      <p> <b>Figure 2: </b> Figure 2 shows a scatter plot titled 'log(Execution Time) vs Number of Lines,' with the x-axis ranging from 0 to 35 and the y-axis from -5.0 to 1.0. Data points for gpt-4o (blue), o3-mini (green), and Microsoft Copilot (red) are shown, with a legend at the bottom identifying each model. Hover over each data point to see the difficulty and execution time in milliseconds. The scatter plot highlights the differences in performance characteristics between the three models, with gpt-4o and o3-mini showing more efficient execution times relative to the number of lines of code compared to Microsoft Copilot.
       </p>
 
     </container>
@@ -81,8 +79,7 @@
 
       <iframe src="boxplot.html" width="600" height="500" frameborder="0"></iframe>
       <br>
-      <p> <b>Figure 3: </b>Figure 3, "Execution Times by Difficulty Level and Model" shows execution times (0 to 0.8 ms) for gpt-4o, o3-mini, and Copilot across Easy and Medium difficulty levels.
-        The box plot chart highlights the differences in execution time distributions between the three models, with gpt-4o and o3-mini generally showing faster and more consistent performance compared to copilot.
+      <p> <b>Figure 3: </b>Figure 3, 'Execution Times by Difficulty Level and Model' shows execution times (0 to 0.8 ms) for gpt-4o, o3-mini, and Copilot across Easy and Medium difficulty levels. Hover over each boxplot to see detailed statistics, including median execution times and interquartile ranges, which vary based on the difficulty level. The box plot chart highlights the differences in execution time distributions between the three models, with gpt-4o and o3-mini generally showing faster and more consistent performance compared to Copilot.
       </p>
 
     </container>
@@ -94,7 +91,7 @@
         <div id="heatmap"></div>
         <iframe src="viz3.html" width="900" height="500" frameborder="0"></iframe>
         <br>
-        <p> <b>Figure 4: </b> Figure 4's heatmap illustrates the execution time (in milliseconds) versus the number of loops for different models: gpt-4o, o3-mini, and copilot. The color intensity represents the execution time, with darker shades indicating longer times. The heatmap compares execution times across loop counts (0 to 4) for three models: gpt-4o, o3-mini, and copilot. The color gradient shows execution time (0.00 to 0.70 ms).</p>
+        <p> <b>Figure 4: </b> Figure 4's heatmap illustrates the execution time (in milliseconds) versus the number of loops for different models: gpt-4o, o3-mini, and copilot. The color intensity represents the execution time, with darker shades indicating longer times. The heatmap compares execution times across loop counts (0 to 4) for three models: gpt-4o, o3-mini, and copilot. The color gradient shows execution time (0.00 to 0.70 ms). Hover over each square to see the model type, number of loops, execution time, and average parameters.</p>
   
       </container>
     <br>
@@ -105,7 +102,7 @@
     <p><b>Code Length Efficiency:</b> GPT-4o and o3-mini generate shorter code solutions on average compared to Copilot.</p>
     <p><b>Outliers and Variability:</b> Copilot has more pronounced outliers and variability in execution times, especially for Easy tasks.</p>
     <p><b>Heatmap Insights:</b> The heatmap shows that as the number of loops increases, execution times generally increase for all models, with Copilot exhibiting the highest execution times and variability.</p>
-    <p><b>In summary: </b>These conclusions highlight the consistent efficiency of GPT-4o and o3-mini across various metrics, while Copilot shows greater variability and higher execution times, particularly as task complexity increases.</p>
+    <p><b>In summary: </b>These conclusions highlight the consistent efficiency of GPT-4o and o3-mini across various metrics, while Copilot shows greater variability and higher execution times, particularly as task complexity increases. If given more time, we believe it would be interesting to include the difficulty level 'Hard' in our study and compare those results with the Easy and Medium levels of coding.</p>
     
   </main>
 
