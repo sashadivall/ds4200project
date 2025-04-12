@@ -31,6 +31,26 @@
         problems.
     </p>
     <br>
+    <h3>References</h3>
+    <p class="indent-block">
+      Since people have started using LLMs as an aid to writing code, the topic of which LLMs are the best at writing code has become an 
+      subject of interest for researchers. We used the following references as guides throughout our own research process:
+      <ol>
+        <li>
+          Zheng, Zibin, et al. "A Survey of Large Language Models for Code: Evolution, Benchmarking, and Future Trends." <i>arXiv</i>, 8 Jan. 2024, <a href="https://arxiv.org/abs/2311.10372v2">https://arxiv.org/abs/2311.10372v2</a>:
+           This paper, published in early 2024, explores three interesting research questions: "What LLMs are specifically designed for software engineering tasks, and what is the relationship between them?", 
+           "Do Code LLMs really outperform general LLMs in software engineering tasks?", and "Which LLMs are more proficient in different software engineering tasks?". This paper used 
+           similar methodology to ours in that they comprehensively analyzed several LLM models at generating code and compared their performances.
+        </li>
+        <li>
+          "Large Language Models for Code Completion: A Systematic Literature Review." <i>Knowledge-Based Systems</i>, vol. 285, 2024, <a href=https://doi.org/10.1016/j.knosys.2024.111573>https://doi.org/10.1016/j.knosys.2024.111573</a>:
+           This paper, also published in 2024, is a literature review of LLMs used for code completion. Contrasting to our exploration, this paper dives into the previous research and theory behind LLMs for code completiong.
+        </li>
+      </ol>
+
+
+    </p>
+    <br>
     <h3>Dataset Creation</h3>
     <p class="indent-block"> 
       <h4>We created our dataset from scratch by providing a series of prompts to 3 different LLMs. </h4>
@@ -74,16 +94,9 @@
             to execute and the output it returned. All code snippets returned an output that was equal to the expected output. Explore the dataset <a href="dataset_exploration.html">here!</a>
           </li>
       </ol>
-      <br>
-      <br>
-      
-      
-      
-
     </p>
-    <br>
-    <br>
 
+    <br>
     <h2>Results</h2>
     <container>
       <iframe src="viz1.html" width="1000" height="500" frameborder="0"></iframe>
@@ -134,7 +147,6 @@
   </main>
 
   <footer>
-
     <p>DS4200 Final Project Spring 2025 - Which LLM is the Best at Writing Code?</p>
   </footer>
 </body>
